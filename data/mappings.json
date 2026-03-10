@@ -1,24 +1,16 @@
 {
   "002": {
     "5-1-A2": {
-      "pdf": "https://serajsteel.github.io/your-repo/files/5-1-A2 - BEAM.pdf",
-      "ifc": "https://serajsteel.github.io/your-repo/files/5-1-A2.ifc"
+      "pdf": "https://yourusername.github.io/your-repo/files/5-1-A2 - BEAM.pdf",
+      "ifc": "https://yourusername.github.io/your-repo/files/5-1-A2.ifc"
     },
     "5-2-A3": {
-      "pdf": "https://serajsteel.github.io/your-repo/files/5-2-A3 - FRAME.pdf",
-      "ifc": "https://serajsteel.github.io/your-repo/files/5-2-A3.ifc"
+      "pdf": "https://yourusername.github.io/your-repo/files/5-2-A3 - BEAM.pdf",
+      "ifc": "https://yourusername.github.io/your-repo/files/5-2-A3.ifc"
     },
     "5-2-A33": {
-      "pdf": "https://serajsteel.github.io/your-repo/files/5-2-A33 - FRAME.pdf",
-      "ifc": "https://serajsteel.github.io/your-repo/files/5-2-A33.ifc"
-    }
-    "5-2-A33": {
-      "pdf": "https://serajsteel.github.io/your-repo/files/5-2-A33 - BEAM.pdf",
-      "ifc": "https://serajsteel.github.io/your-repo/files/5-2-A33.ifc"
-    }
-    "5-2-A51": {
-      "pdf": "https://serajsteel.github.io/your-repo/files/5-2-A51 - FRAME.pdf",
-      "ifc": "https://serajsteel.github.io/your-repo/files/5-2-A51.ifc"
+      "pdf": "https://yourusername.github.io/your-repo/files/5-2-A33 - FRAME.pdf",
+      "ifc": "https://yourusername.github.io/your-repo/files/5-2-A33.ifc"
     }
   }
 }
