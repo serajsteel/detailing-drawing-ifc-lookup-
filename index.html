@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Drawing / IFC Lookup</title>
+</head>
+<body>
+  <h1>Seraj Steel System Drawing / IFC</h1>
+
+  <label>Project No:</label>
+  <input type="text" id="project" />
+
+  <label>Assembly Mark:</label>
+  <input type="text" id="assembly" />
+
+  <button id="searchBtn">Search</button>
+
+  <div id="result"></div>
+
+  <script>
+    let mappings = {};
+
+    fetch('data/mappings.json')
+      .then(r => r.json())
+      .then(data => mappings = data);
+
+    document.getElementById('searchBtn').addEventListener('click', () => {
+      const project = document.getElementById('project').value.trim();
+      const assembly = document.getElementById('assembly').value.trim();
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '';
+
+      if (!project || !assembly) {
+        resultDiv.textContent = 'Please fill both fields.';
+        return;
+      }
+
+      const projData = mappings[project];
+      const asmData = projData ? projData[assembly] : null;
+
+      if (!asmData) {
+        resultDiv.textContent = 'No record found for this Project / Assembly.';
+        return;
+      }
+
+      const pdfBtn = document.createElement('a');
+      pdfBtn.href = asmData.pdf;
+      pdfBtn.textContent = 'View PDF Drawing';
+      pdfBtn.target = '_blank';
+      pdfBtn.style.display = 'block';
+
+      const ifcBtn = document.createElement('a');
+      ifcBtn.href = `view.html?project=${encodeURIComponent(project)}&assembly=${encodeURIComponent(assembly)}`;
+      ifcBtn.textContent = 'View IFC Model';
+      ifcBtn.target = '_blank';
+      ifcBtn.style.display = 'block';
+
+      resultDiv.appendChild(pdfBtn);
+      resultDiv.appendChild(ifcBtn);
+    });
+  </script>
+</body>
+</html>
